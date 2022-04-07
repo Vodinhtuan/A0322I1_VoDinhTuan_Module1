@@ -1,0 +1,17 @@
+table{
+    margin: 50px;
+}
+th, td {
+    padding: 5px;
+}
+.tieude{
+    color: white;
+    background-color: orange;
+}
+.tieude2{
+    color: blue;
+    background-color: aquamarine;
+}
+.bang02{
+    background-color: bisque;
+}
