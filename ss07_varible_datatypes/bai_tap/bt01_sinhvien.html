@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Điểm sinh viên</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+
+     var inputphysics = prompt("Enter physics point: "+inputphysics);
+     var inputchemistry = prompt("Enter chemistry point: "+inputchemistry);
+     var inputbiological = prompt("Enter biological point: "+inputbiological);
+
+
+     var physics = parseInt(inputphysics);
+     var chemistry = parseInt(inputchemistry);
+     var biological = parseInt(inputbiological);
+
+    var medium= [(physics+chemistry+biological)/3];
+    var total= (physics+chemistry+biological);
+
+    document.write("The medium is: " +medium +" point");
+    document.write("<br><br>");
+    document.write("The total is: " +total +" point");
+
+</script>
