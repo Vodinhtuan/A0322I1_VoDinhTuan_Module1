@@ -4,47 +4,67 @@
     <meta charset="UTF-8">
     <title>Currency</title>
     <style>
+        table{
+            text-align: center;
+            padding: 5px ;
+            margin: 300px auto  auto auto;
+            border-collapse: collapse
+        }
         th, td {
-            padding: 15px;
+            padding: 5px;
+        }
+        button{
+            background-color: rgba(144,116,133,0.96);
+            color: white
         }
     </style>
 </head>
 <body>
-    <form action="bt05_currency.html" method="post" style="width: 80%">
-        <table style="text-align: center;padding: 15px ; margin: auto; border-collapse: collapse">
+    <form action="" method="get" style="width: 80%">
+        <table>
         <tr>
             <th>Amount</th>
             <th>From Curency</th>
             <th>To Currency</th>
         </tr>
         <tr>
-            <td><input type="textarea" name="Name" placeholder="Enter the amount " style="width: 100px; height: 13px"></td>
+            <td><input type="number" id="inputcurency" placeholder="Enter the amount " ></td>
             <td>
-                <select>
-                    <option>VietNam</option>
-                    <option>American</option>
+                <select name="" id="from">
+                    <option value="vietnam">VietNam</option>
+                    <option value="american">American</option>
                 </select>
             </td>
             <td>
-                <select>
-                    <option>USD</option>
-                    <option>VND</option>
+                <select name="" id="to">
+                    <option value="vietnam">VND</option>
+                    <option value="american">USD</option>
                 </select>
             </td>
             <td>
-                <input type="submit" name="Submit" value="convert" style="background-color: rgba(144,116,133,0.96); color: white">
+                <button onclick="dosomething()">Converst</button>
             </td>
         </tr>
+            <tr>
+
+            </tr>
         </table>
-        <!--<span>Amount</span><br>
-        <input type="text" name="Name" placeholder="Enter your name" style="width: 200px; height: 25px"><br>
-        <span>From Curency</span><br>
-        <input type="text" name="Name" placeholder="Enter your name" style="width: 200px; height: 25px"><br>
-        <span>To Currency</span><br>
-        <input type="text" name="Name" placeholder="Enter your name" style="width: 200px; height: 25px">-->
     </form>
 </body>
 </html>
 <script>
+    function dosomething() {
+        let enter = document.getElementById('inputcurency').value;
+        let from = document.getElementById('from').value;
+        let to = document.getElementById('to').value;
 
+        if (from==to){
+            alert(enter);
+        }else if (from =='vietnam' && to=='american'){
+            alert(enter/24000);
+        }else if (from =='american' && to=='vietnam'){
+            alert(enter*24000);
+        }
+
+    }
 </script>
