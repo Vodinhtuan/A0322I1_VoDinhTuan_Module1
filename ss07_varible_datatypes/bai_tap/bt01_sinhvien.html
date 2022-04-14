@@ -10,14 +10,9 @@
 </html>
 <script>
 
-     var inputphysics = prompt("Enter physics point: "+inputphysics);
-     var inputchemistry = prompt("Enter chemistry point: "+inputchemistry);
-     var inputbiological = prompt("Enter biological point: "+inputbiological);
-
-
-     var physics = parseInt(inputphysics);
-     var chemistry = parseInt(inputchemistry);
-     var biological = parseInt(inputbiological);
+     var physics = parseInt(prompt("Enter physics point: "));
+     var chemistry = parseInt(prompt("Enter chemistry point: "));
+     var biological = parseInt(prompt("Enter biological point: "));
 
     var medium= [(physics+chemistry+biological)/3];
     var total= (physics+chemistry+biological);
