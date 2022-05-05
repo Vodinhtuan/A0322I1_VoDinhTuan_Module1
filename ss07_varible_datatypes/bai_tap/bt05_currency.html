@@ -8,10 +8,12 @@
             text-align: center;
             padding: 5px ;
             margin: 200px auto  auto auto;
-            border-collapse: collapse
+            border-collapse: collapse;
+            border:5px
         }
         th, td {
             padding: 5px;
+
         }
         button{
             background-color: rgba(144,116,133,0.96);
@@ -48,9 +50,11 @@
                 <td style="color: blue">Result: <span id="ketqua"></span></td>
             </tr>
         </table>
+        <br><br>
 </body>
 </html>
 <script>
+
     function dosomething() {
         let enter = document.getElementById('inputcurency').value;
         let from = document.getElementById('from').value;
@@ -64,4 +68,7 @@
             document.getElementById("ketqua").innerHTML = enter*24000;
         }
     }
+
+
+
 </script>

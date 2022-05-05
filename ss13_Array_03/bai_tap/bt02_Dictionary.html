@@ -3,11 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <title>Dictionary</title>
+    <style>
+
+    </style>
 </head>
 <body>
-
+    <h1 style="color: red">Dictionary</h1>
+    <input style="height: 20px; color: deeppink ; background-color: chartreuse" type="text" placeholder="Nhập từ cần tìm kiếm" id="nntb1">
+    <button style="height: 30px; background-color: orange"  onclick="nntb2()">Tìm Kiếm</button>
+    <h4 style="color: blue" id="ketQua"></h4>
 </body>
 </html>
 <script>
-
+    let tiengViet = ["Khỉ", "Chó", "Mèo", "Hổ", "Sư Tử", "Voi", "Rắn", "Trâu"]
+    let tiengAnh= ["monkey", "dog", "cat", "tiger", "lion", "elephent", "snake", "buffalo"]
+    function nntb2(){
+        let a = document.getElementById('nntb1').value
+        let b = tiengAnh.indexOf(a)
+        if( b!=-1){
+            document.getElementById("ketQua").innerText = tiengViet[b]
+        } else {
+            alert("Dịch không ra")
+        }
+    }
 </script>
+ <!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 style="color: red">Dictionary</h1>
+<input style="height: 20px; color: deeppink ; background-color: chartreuse" type="text" placeholder="Nhập từ cần tìm kiếm" id="nntb1">
+<button style="height: 30px; background-color: orange"  onclick="nntb2()">Tìm Kiếm</button>
+<h4 style="color: blue" id="ketQua"></h4>
+<script>
+    let tiengViet = ["Khỉ", "Chó", "Mèo", "Hổ", "Sư Tử", "Voi", "Rắn", "Trâu"]
+    let tiengAnh= ["monkey", "dog", "cat", "tiger", "lion", "elephent", "snake", "buffalo"]
+    function nntb2(){
+        let a = document.getElementById('nntb1').value
+        let b = tiengAnh.indexOf(a)
+        if( b!=-1){
+            document.getElementById("ketQua").innerText = tiengViet[b]
+        } else {
+            alert("Dịch không ra")
+        }
+    }
+</script>
+</body>
+</html> -->
