@@ -4,52 +4,89 @@
     <meta charset="UTF-8">
     <title>Dictionary</title>
     <style>
+        table{
+            text-align: center;
+            padding: 5px ;
+            margin: 200px auto  auto auto;
+            border-collapse: collapse;
+            border:5px
+        }
+        th, td {
+            padding: 5px;
 
+        }
+        button{
+            background-color: rgba(144,116,133,0.96);
+            color: white
+        }
     </style>
 </head>
 <body>
-    <h1 style="color: red">Dictionary</h1>
-    <input style="height: 20px; color: deeppink ; background-color: chartreuse" type="text" placeholder="Nhập từ cần tìm kiếm" id="nntb1">
-    <button style="height: 30px; background-color: orange"  onclick="nntb2()">Tìm Kiếm</button>
-    <h4 style="color: blue" id="ketQua"></h4>
+<table>
+    <tr>
+        <th>Dictionary</th>
+        <th>From</th>
+        <th>To</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="inputtxt" placeholder="Enter the words " ></td>
+        <td>
+            <select name="" id="from">
+                <option value="vietnam">VietNam</option>
+                <option value="eng">Eng</option>
+            </select>
+        </td>
+        <td>
+            <select name="" id="to">
+                <option value="vietnam">VietNam</option>
+                <option value="eng">Eng</option>
+            </select>
+        </td>
+        <td>
+            <button onclick="domore()">Converst</button>
+        </td>
+    </tr>
+    <tr>
+        <td style="color: blue">Result: <span id="ketqua"></span></td>
+    </tr>
+</table>
 </body>
 </html>
 <script>
-    let tiengViet = ["Khỉ", "Chó", "Mèo", "Hổ", "Sư Tử", "Voi", "Rắn", "Trâu"]
+    function domore() {
+        let vN = ["đi", "chạy", "nhảy", "bơi", "múa"];
+        let eN = ["go", "run", "yum", "swimming", "dance"]
+        let enter = document.getElementById('inputtxt').value;
+        let from = document.getElementById('from').value;
+        let to = document.getElementById('to').value;
+
+        if (from==to){
+            document.getElementById("ketqua").innerHTML = enter;
+        }else if (from =='vietnam' && to=='eng'){
+            let vn = vN.indexOf(enter);
+            if( vn != -1){
+                document.getElementById("ketqua").innerHTML = eN[vn]
+            } else {
+                alert("Error")
+            }
+        }else if (from =='eng' && to=='vietnam'){
+            let en = eN.indexOf(enter);
+            if( en!=-1){
+                document.getElementById("ketqua").innerHTML = vN[en]
+            } else {
+                alert("Error")
+            }
+        }
+    }
+   /* let tiengViet = ["Khỉ", "Chó", "Mèo", "Hổ", "Sư Tử", "Voi", "Rắn", "Trâu"]
     let tiengAnh= ["monkey", "dog", "cat", "tiger", "lion", "elephent", "snake", "buffalo"]
     function nntb2(){
         let a = document.getElementById('nntb1').value
         let b = tiengAnh.indexOf(a)
         if( b!=-1){
-            document.getElementById("ketQua").innerText = tiengViet[b]
+            document.getElementById("ketQua").innerHTML = tiengViet[b]
         } else {
             alert("Dịch không ra")
         }
-    }
+    }*/
 </script>
- <!--<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<h1 style="color: red">Dictionary</h1>
-<input style="height: 20px; color: deeppink ; background-color: chartreuse" type="text" placeholder="Nhập từ cần tìm kiếm" id="nntb1">
-<button style="height: 30px; background-color: orange"  onclick="nntb2()">Tìm Kiếm</button>
-<h4 style="color: blue" id="ketQua"></h4>
-<script>
-    let tiengViet = ["Khỉ", "Chó", "Mèo", "Hổ", "Sư Tử", "Voi", "Rắn", "Trâu"]
-    let tiengAnh= ["monkey", "dog", "cat", "tiger", "lion", "elephent", "snake", "buffalo"]
-    function nntb2(){
-        let a = document.getElementById('nntb1').value
-        let b = tiengAnh.indexOf(a)
-        if( b!=-1){
-            document.getElementById("ketQua").innerText = tiengViet[b]
-        } else {
-            alert("Dịch không ra")
-        }
-    }
-</script>
-</body>
-</html> -->
