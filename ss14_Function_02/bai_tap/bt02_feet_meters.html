@@ -62,12 +62,24 @@
     var inputType = document.getElementById('inputType');
     var resultType = document.getElementById('resultType');
     var inputTypeValue, resultTypeValue;
-    console.log(input)
-    function footToMeter(foot){
+    
+    input.addEventListener("keyup",myResult);
+    inputType.addEventListener("change",myResult);
+    resultType.addEventListener("change",myResult);
+    
+    inputTypeValue = inputType.value;
+    resultTypeValue = resultType.value;
+    
+    function myResult() {
+        inputTypeValue = inputType.value;
+        resultTypeValue = resultType.value;
 
+        if (inputTypeValue === "meter" && resultTypeValue === "foot"){
+            result.value = Number(input.value)*0.305;
+        } else if (inputTypeValue === "foot" && resultTypeValue === "meter"){
+            result.value = Number(input.value)*3.279;
+        }
     }
-    function meterToFoot(meter){
-
-    }
+    
 
 </script>
