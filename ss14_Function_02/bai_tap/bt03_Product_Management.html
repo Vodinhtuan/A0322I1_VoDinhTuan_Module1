@@ -18,6 +18,9 @@
 <table id="displayArea" border="1">
 
 </table>
+<div id="edit">
+
+</div>
 </body>
 </html>
 <script>
@@ -27,13 +30,13 @@
     function displayAll() {
         let str = '<tr>\n' +
             '<td>Product Name</td>\n' +
-            '<td></td>\n'+
+            '<td></td>\n' +
             '<td>' + listProduct.length + 'products</td>\n' +
-        '</tr>';
+            '</tr>';
         for (let i = 0; i < listProduct.length; i++) {
             str += '<tr><td>' + listProduct[i] + '</td>' +
-                '<td><button onclick="alert(\'Edit\')">Edit</button></td>' +
-                '<td><button onclick="deleteProduct('+i+')">Delete</button></td></tr>'
+                '<td><button onclick="showFormEdit(' + i + ')">Edit</button></td>' +
+                '<td><button onclick="deleteProduct(' + i + ')">Delete</button></td></tr>'
         }
         document.getElementById('displayArea').innerHTML = str;
     }
@@ -45,9 +48,21 @@
         console.log(listProduct);
         displayAll();
     }
+
     function deleteProduct(index) {
-        listProduct.splice(index,1);
+        listProduct.splice(index, 1);
         displayAll();
     }
 
+    function showFormEdit(index) {
+        let str = '';
+        str = '<input type="text" id="editProduct" value="' + listProduct[index] + '"><button onclick="saveProduct(' + index + ')">Save</button>';
+        document.getElementById('edit').innerHTML = str;
+    }
+
+    function saveProduct(index) {
+        listProduct[index] = document.getElementById("editProduct").value;
+        document.getElementById('edit').innerHTML = '';
+        displayAll();
+    }
 </script>
