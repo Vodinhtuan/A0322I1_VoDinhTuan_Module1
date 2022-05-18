@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number to string</title>
+</head>
+<body>
+    <div><input  id="inputtt" type="number" onkeyup="doing()"></div>
+<div><p id="res"></p></div>
+</body>
+</html>
+<script>
+
+    function doing() {
+        let words = ['không', 'một', 'hai', 'ba', 'bốn', 'năm', 'sáu', 'bảy', 'tám', 'chín'];
+        let enter_ = document.getElementById('inputtt').value;
+        let str='';
+        for (let i = 0; i < enter_.length; i++) {
+            let index=parseInt(enter_[i]);
+            str+=words[index]+" ";
+        }
+        document.getElementById("res").innerHTML = str
+    }
+</script>
