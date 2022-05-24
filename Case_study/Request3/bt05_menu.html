@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Stt</td>
+        <td>Tên nước uống</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>01</td>
+        <td>Cafe</td>
+        <td><button type="button" id="cafe">Cafe</button> </td>
+    </tr>
+    <tr>
+        <td>02</td>
+        <td>Cam vắt</td>
+        <td><button type="button" id="cam">Cam vắt</button> </td>
+    </tr>
+    <tr>
+        <td>03</td>
+        <td>Nước ép cà rốt</td>
+        <td><button type="button" id="carrot">Carrot</button> </td>
+    </tr>
+    <tr>
+        <td>04</td>
+        <td>Nước ép cà chua</td>
+        <td><button type="button" id="tomato">Cà chua</button> </td>
+    </tr>
+    <tr>
+        <td>05</td>
+        <td>Nước lọc</td>
+        <td><button type="button" id="water">Nước</button> </td>
+    </tr>
+    <tr>
+        <td>06</td>
+        <td>Nước đừa</td>
+        <td><button type="button" id="coconut">Nước dừa</button> </td>
+    </tr>
+</table>
+<p id="id_outIII5"></p>
+</body>
+</html>
+<script>
+    let Arrray_Menu=[["Cafe",25000],["Cam vắt",35000],["Nước ép cà rốt",20000],["Nước ép cà chua",20000],
+        ["Nước lọc",5000],["Nước dừa",30000]];
+    let Sum=0;
+    function on_add_nuoc(x) {
+        let num=parseInt(prompt("Nhập số lượng( "+Arrray_Menu[x][0]+"): "));
+        let s=Arrray_Menu[x][1]*num;
+        Sum+=s;
+        document.getElementById("id_outIII5").innerText="Tổng số tiền cần trả: "+Sum+"vnd";
+    }
+    on_add_nuoc();
+</script>

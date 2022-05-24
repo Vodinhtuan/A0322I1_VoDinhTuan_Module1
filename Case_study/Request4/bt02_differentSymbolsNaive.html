@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>differentSymbolsNaive(s)</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function getCount(string) {
+       var different = [];
+       different.push(string[0])
+        for (let i = 1; i < string.length; i++) {
+            if(different.indexOf(string[i])===-1){
+                different.push(string[i])
+            }
+        }
+        return different.length;
+    }
+
+    console.log(getCount("hhhhavd"));
+</script>
