@@ -26,16 +26,16 @@
 </html>
 <script>
     function result() {
-        var input = parseInt(document.getElementById("inputSalary").value);
+        var input = parseFloat(document.getElementById("inputSalary").value);
         if (input<7000000){
             document.getElementById("Tax1").innerHTML = "5%";
-            document.getElementById("Net2").innerHTML = input-(input*5/100);
+            document.getElementById("Net2").innerHTML = input-(input*0.05);
         }else if (7000000<input<15000000){
             document.getElementById("Tax1").innerHTML = "15%";
-            document.getElementById("Net2").innerHTML = input-(input*15/100);
+            document.getElementById("Net2").innerHTML = input-(input*0.15);
         }else if (input==15000000){
             document.getElementById("Tax1").innerHTML = "20%";
-            document.getElementById("Net2").innerHTML = input-(input*20/100);
+            document.getElementById("Net2").innerHTML = input-(input*0.2);
         }else {
             document.getElementById("Tax1").innerHTML = " ";
             document.getElementById("Net2").innerHTML = " ";
