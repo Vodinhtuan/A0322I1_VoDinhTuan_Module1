@@ -9,7 +9,20 @@
 </body>
 </html>
 <script>
-    function getCount(string) {
+    function differentSymbolsNaive(str) {
+        let arr = [];
+        for (let i =0; i< str.length; i++){
+            if (arr.indexOf(str.charAt(i)) === -1){
+                arr.push(str.charAt(i));
+            }
+        }
+        return arr.length;
+    }
+    let str =prompt("Nhap vao xau ky tu: ");
+    alert('Co '+ differentSymbolsNaive(str)+' ky tu khac nhau.');
+
+
+    /*function getCount(string) {
        var different = [];
        different.push(string[0])
         for (let i = 1; i < string.length; i++) {
@@ -17,9 +30,7 @@
                 different.push(string[i])
             }
         }
-
         return different.length;
     }
-
-    console.log(getCount("cabca"));
+    console.log(getCount("cabca"));*/
 </script>
