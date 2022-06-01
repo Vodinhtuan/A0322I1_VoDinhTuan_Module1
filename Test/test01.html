@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 1</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let a = [];
+    let count = 0;
+    let sum = 0;
+    let ketqua = 0;
+    let n= parseInt(prompt("Nhap vao do dai mang a: "));
+    for (let i=0; i<=n;i++){
+        a.push(parseInt(prompt("Nhap vao phan tu mang: ")));
+    }
+    for (let i = 0; i < a.length; i++) {
+        if (a.length<50){
+        if (a[i] % 2 !== 0 && a.indexOf(a.values() %2 ==0)){
+            count ++;
+            sum = (sum+a[i])
+        }
+    }
+    }
+    ketqua = sum/count;
+    alert("Mang: " + a + "\n" + " Co trung binh cong cac so le tai vi tri chan la: " + ketqua);
+</script>
+ // phải dùng do while check <50
